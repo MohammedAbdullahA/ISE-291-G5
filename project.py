@@ -22,8 +22,6 @@ print(f' the Numerical columns are \n:{df[Numerical_Columns].describe()}\n' )
 print(f' the CATEGORICAl columns are \n:{df[Categorical_Columns].describe()}\n' )
 
 print(f'The number of rows: {len(df.index)}, the number of columns : {len(df.columns)}.') #The number of rows and columns
-#كود الnon بس نسيته#
-
+print(f'The number of non-null rows for each column are:\n{df.count()}')
 display(df.head(10))
-
-
+display(df.count())
