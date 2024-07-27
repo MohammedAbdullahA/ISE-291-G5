@@ -13,3 +13,4 @@ for c in num_columns: #drawing box plots to identify and list outliers
 
 ##To fix the inconsistencies, we will apply the following temp-functions
 df["Age"] = df["Age"].apply(lambda x : x if x > 0 else abs(x))
+df["Sleep Duration"]=df["Sleep Duration"].apply(lambda x: x if x>1 else 10*x)
