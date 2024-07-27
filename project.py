@@ -24,3 +24,4 @@ print(f' the CATEGORICAl columns are \n:{df[Categorical_Columns].describe()}\n' 
 print(f'The number of rows: {len(df.index)}, the number of columns : {len(df.columns)}.') #The number of rows and columns
 print(f'The number of non-null rows for each column are:\n{df.count()}')
 display(df.head(10))
+print(f'The number of null rows for each column are:\n{df.isna().sum()}')
