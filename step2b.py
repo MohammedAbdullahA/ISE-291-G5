@@ -9,13 +9,7 @@ for c in num_columns: #drawing box plots to identify and list outliers
     plt.figure()
     sns.boxplot(y=c,x='BMI Category',data=df);
     plt.show()
-#Identifying the columns containing ((null values))
-print(f'The number of null rows for each column are:\n{df.isna().sum()}')
-display (null_columns)
-
 ##There is no data needs reformatting to another format, all data is in the appropriate dtTypes (Munging and Wrangling concept)
 
 ##To fix the inconsistencies, we will apply the following temp-functions
 df["Age"] = df["Age"].apply(lambda x : x if x > 0 else abs(x))
-modeValue = df['Occupation'].mode()[0]
-df['Occupation'] = df['Occupation'].apply(lambda x: x if isinstance(x, str) else modeValue)
